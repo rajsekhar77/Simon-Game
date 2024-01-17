@@ -92,7 +92,7 @@ for (btn of allBtns) {
 
 function disableButtons() {
     for (btn of allBtns) {
-        btn.removeEventListener("click", btnPress); // chat gpt
+        btn.removeEventListener("click", btnPress);
     }
 }
 
@@ -110,7 +110,7 @@ function checkSequence(index) {
         GameOverFlash(body)
         max(level);
         h2.innerHTML = `Game Over!! Your Score was <b>${level}</b> <br> Press any key to start.<br> Highest score was ${highScore}`;
-        disableButtons(); // chat gpt
+        disableButtons();
         reset();
     }
 }
@@ -128,12 +128,12 @@ function reset() {
     started = false;
     level = 0;
 
-    // Enable buttons after resetting the game
+    // Enabling the buttons after resetting the game
     for (btn of allBtns) {
-        btn.addEventListener("click", btnPress); // chat gpt
+        btn.addEventListener("click", btnPress);
     }
 
-    document.addEventListener("keypress", keyPressHandler); // Re-add keypress event listener
+    document.addEventListener("keypress", keyPressHandler);
 }
 
 function max(score) {
@@ -141,13 +141,6 @@ function max(score) {
         highScore = score;
 
         // Store the highest score in local storage
-        localStorage.setItem('highestScore', highScore); // chat gpt.
-
-        // You can add additional actions here if needed
+        localStorage.setItem('highestScore', highScore);
     }
 }
-
-
-// json => javascript object notation.
-// xlm => extensible markup language
-// ajax => asynchronus javascript and xml
